@@ -50,7 +50,7 @@ if( !class_exists('WP_Smart_Crop') ) {
 			add_action( 'edit_attachment' , array( $this, 'edit_attachment'  ) );
 
 			// Editor Functions
-			add_action( 'wp_enqueue_media'         , array( $this, 'wp_enqueue_media' ) );
+			add_action( 'admin_head'         , array( $this, 'wp_enqueue_media' ) );
 			add_filter( 'attachment_fields_to_edit', array( $this, 'attachment_fields_to_edit' ), 10, 2 );
 
 			// Thumbnail Crop Functions (for legacy theme support and hard-crop applications)
